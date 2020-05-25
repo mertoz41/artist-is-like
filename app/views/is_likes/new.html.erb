@@ -1,0 +1,9 @@
+<%= form_for(@is_like) do |f| %>
+   
+    <%= f.label :liker_id %>
+    <%= f.collection_select :liker_id, Artist.all, :id, :name, {prompt: "Choose a liker"} %>
+    <%= f.label :liked_id %>
+    <br>
+    <%= f.collection_select :liked_id, Artist.all, :id, :name, {prompt: "Choose who they are like"} %>
+    <%= f.submit "Submit" %>
+<% end %>

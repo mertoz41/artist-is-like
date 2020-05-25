@@ -7,3 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Artist.destroy_all
+IsLike.destroy_all
+User.destroy_all
+
+jt = Artist.create(name:"Justin Timberlake")
+mj = Artist.create(name: "Michael Jackson")
+
+a1 = IsLike.create(liker: jt, liked: mj)
