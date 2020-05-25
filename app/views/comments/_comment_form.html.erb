@@ -1,0 +1,27 @@
+
+
+<% form_for @comment do |f| %>
+
+    <!-- get user creds from session or cookies depending on best Rails implementation -->
+
+        create column isActive:boolean
+
+        validat that only 1 user can be active at a time
+
+        @active_user = User.all.find_by(:isActive true)
+
+        
+
+
+
+    <!-- get is_like creds from session or cookies depending on best Rails implementation -->
+
+    <!-- GET /is_likes/:id/comments/new
+    on C.A. params:id for is_like id, comments_body form submission params[:comment][:comment_body] -->
+
+    <%= f.label :comment_body %>
+    <%= f.text_area :comment_body %>
+
+    <%= f.submit %>
+
+<% end %>

@@ -11,6 +11,10 @@ Artist.destroy_all
 IsLike.destroy_all
 User.destroy_all
 
+user1 = User.create(first_name: 'Bob', last_name: 'Dole', user_name: 'BDole_juice', password: 'abc123')
+user2 = User.create(first_name: 'Mary', last_name: 'Watkins', user_name: 'MJWat', password: 'abc123')
+user3 = User.create(first_name: 'Jeff', last_name: 'Bridges', user_name: 'JeffB12', password: 'abc123')
+
 jt = Artist.create(name:"Justin Timberlake")
 mj = Artist.create(name: "Michael Jackson")
 

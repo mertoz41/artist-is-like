@@ -2,6 +2,6 @@
 
 <ul>
    <%@is_likes.each do |like|%>
-   <li><%=link_to "#{like.liker.name}, is like #{like.liked.name}", is_like_path(like)%></li>
+   <li><%=link_to "#{like.liker.name} is like #{like.liked.name}", is_like_path(like)%></li>
    <%end%>
 </ul>
