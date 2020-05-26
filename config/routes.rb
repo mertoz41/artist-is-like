@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
 
-  get 'is_likes/:id/comments/new', to: "comments#new"
+  get 'is_likes/:id/comments/new', to: "comments#new", as: "like_comment"
 
   get 'sessions/new'
   get 'login', to: "sessions#new"

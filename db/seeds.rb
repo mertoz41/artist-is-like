@@ -6,6 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'rest-client'
+
+grant_url = "https://accounts.spotify.com/api/token"
+
+RestClient.post(grant_url, headers= {}, body={})
+
+url = "https://api.spotify.com/artists"
+
+RestClient.get(url, header)
+
 User.destroy_all
 Artist.destroy_all
 IsLike.destroy_all

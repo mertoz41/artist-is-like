@@ -1,2 +1,21 @@
-<h1>AIsLikes#show</h1>
-<p>Find me in app/views/a_is_likes/show.html.erb</p>
+<h1>Is Likes</h1>
+
+<h3> <%= @is_like.liker.name %> is like <%= @is_like.liked.name %> </h3>
+
+
+<h4> Comments </h4>
+
+<section>
+
+    <% @is_like.comments.each do |ilc| %>
+
+        <div class = 'comment-box'> 
+
+            <div> <%= ilc.comment_body %> <span><strong> <%= User.find(ilc.user_id).user_name %> </strong> <span> <%= ilc.created_at.strftime("%m/%d/%Y") %> </div>
+            
+        </div>
+
+    <% end %>
+
+
+</section>

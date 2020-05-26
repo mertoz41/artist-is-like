@@ -5,7 +5,7 @@ class IsLikesController < ApplicationController
 
   def show
     @is_like = IsLike.find(params[:id])
-    end
+  end
 
   def new
       @is_like = IsLike.new

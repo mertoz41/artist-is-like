@@ -10,7 +10,8 @@ class CommentsController < ApplicationController
   end
 
   def create
-    byebug
+    @comment = Comment.create(comment_params(:user_id, :is_like_id, :comment_body))
+    redirect_to is_like_path(@comment.is_like_id)
   end
 
   def edit
