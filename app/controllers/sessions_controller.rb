@@ -5,20 +5,17 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(user_name: params[:user][:user_name]).try(:authenticate, params[:user][:password])
-    if user    
+    if user  
     session[:user_name] = user.user_name 
     redirect_to artists_path
     else 
+      flash[:error_message] = "Invalid username or password" 
       redirect_to login_path
     end 
   end 
 
   def destroy    
-    session.delete :user_name  
+    session.clear
+    redirect_to login_path  
   end
-
-  
-
-
-
 end
