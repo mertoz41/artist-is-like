@@ -12,12 +12,14 @@
 
   <body>
     <% if session[:user_name] %>
-      <div>
-      <p> Hi, <%= session[:user_name]%></p>
-      <%= button_to "Logout", login_path, method: "DELETE" %>
+      <div class="nav-bar">
+      <p> Hi, <%=session[:user_name]%></p>
+      <%= button_to "Logout", login_path, :method => :delete %>
       </div>
     <% else %>
+      <div class="nav-bar">
       <%= link_to "Log in", login_path %>
+      </div>
     <% end %> 
     <%= yield %>
     

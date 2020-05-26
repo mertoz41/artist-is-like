@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'login', to: "sessions#new"
   post 'login', to: "sessions#create"
+  delete 'login', to: "sessions#destroy"
   # get 'artists/index'
   # get 'artists/show'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
