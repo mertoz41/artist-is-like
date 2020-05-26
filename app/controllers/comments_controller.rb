@@ -3,10 +3,14 @@ class CommentsController < ApplicationController
   before_action :find_comment, only: [:edit, :update, :destroy]
 
   def new
+      @user = User.find_by(user_name: session[:user_name])
+      @is_like = IsLike.find(params[:id])
       @comment = Comment.new
+      
   end
 
   def create
+    byebug
   end
 
   def edit

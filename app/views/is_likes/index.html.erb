@@ -1,7 +1,10 @@
 <h1>AIsLikes#index</h1>
 
-<ul>
+<div>
    <%@is_likes.each do |like|%>
-   <li><%=link_to "#{like.liker.name} is like #{like.liked.name}", is_like_path(like)%></li>
+   <div>
+      <p><%=link_to "#{like.liker.name} is like #{like.liked.name}", is_like_path(like)%></p>
+      <%= button_to "Add a Comment", "/is_likes/#{like.id}/comments/new", :method => :get %>
+   </div>
    <%end%>
-</ul>
+</div>
