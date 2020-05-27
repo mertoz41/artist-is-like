@@ -1,4 +1,9 @@
-require 'rest-client'
+
+require "uri"
+require "net/http"
+
+require 'base64'
+require_relative '../../tokens_and_keys.rb'
 
 class ArtistsController < ApplicationController
   before_action :authorized, except: [:index]
@@ -17,30 +22,80 @@ class ArtistsController < ApplicationController
       
       #easy
         #generate a new Authentication Token
-    access_url = 'https://accounts.spotify.com/api/token'
 
+    url = URI("https://accounts.spotify.com/api/token")
 
-    response = RestClient::Request.execute(method: :post, url: access_url, 
-                headers: {"Content-Type": "application/x-www-form-urlencoded", 
-                          "Authorization": "Basic <base64 encoded #{CLIENT_ID}:#{CLIENT_SECRET}>"},
-                body: {"grant_type": "client_credentials"})
+    https = Net::HTTP.new(url.host, url.port);
+    https.use_ssl = true
+      
+    client = "#{Base64.strict_encode64($API_CLIENT_ID)}"
+    secret = "#{Base64.strict_encode64($API_CLIENT_SECRET)}"
+    encoding = "#{client}:#{secret}"
 
-    data = JSON.parse(response)
+    a_request = Net::HTTP::Post.new(url)
+    a_request["Authorization"] = "Basic Y2ZiYWVkYWFiYjRlNDU2M2I4MzlhM2YwMzY1ODUwM2E6NWY1MTg5OTY4ZjM1NDQ2Y2FkMzQ1ZmMxNDJjMzM5Y2U="
+    a_request["Content-Type"] = "application/x-www-form-urlencoded"
+    a_request["Cookie"] = "__Host-device_id=AQAPKQDyKW4K44mlfR05wi1HY7zoU9jc-zm1FsKtFDbwQJIPW__Po34ROwHzi7AQlojZ1AAvKlRcKEBrCoG4dGHlusScPopF7lQ"
+    a_request.body = "grant_type=client_credentials"
 
-    byebug
+    access_response = https.request(a_request)
+
+    data = JSON.parse(access_response.read_body)
+
+    @access = data["access_token"]
+    
       # harder
         # is the token valid? 
   end
   
   def create
-    #the api stuff
+    
+    artist_name = params[:artist][:name]
+    access = params[:artist][:access]
+    
     # artist_name = params[:name]
-
+    # sanitize name
+    if artist_name.include?(" ")
+      artist_name.gsub!(" ", "%20").strip!
+    end
+    
+    #the api stuff
     # call the api 
-
+    api_url = URI("https://api.spotify.com/v1/search?q=#{artist_name}&type=artist")
+    
+    https = Net::HTTP.new(api_url.host, api_url.port);
+    https.use_ssl = true
+    
     # artist_name into the url with the access token
+    api_request = Net::HTTP::Get.new(api_url)
+    api_request["Authorization"] = "Bearer #{access}"
+    
+    response = https.request(api_request)
+    
+    data = JSON.parse(response.read_body)
+    
+    #create artist
+
+    artist = Artist.new(artist_params(:name))
+    
+    artist[:s_id] = data["artists"]["items"][0]["id"]
+    artist[:s_image_url] = data["artists"]["items"][0]["images"][0]["url"]
+    artist[:name] = data["artists"]["items"][0]["name"]
+    artist[:s_uri] = data["artists"]["items"][0]["uri"]
+    
+    # images_array = data["artists"]["items"][0]["images"]
+    # genres_array = data["artists"]["items"][0]["genres"]
+
+    artist.save 
+
+    redirect_to artist_path(artist)
 
   end
 
+  private 
+
+  def artist_params(*args)
+    params.require(:artist).permit(*args)
+  end
 
 end

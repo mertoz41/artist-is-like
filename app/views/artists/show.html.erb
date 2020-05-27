@@ -1,3 +1,8 @@
 <h1><%=@artist.name%>'s Page</h1>
 
+<%= link_to "Back to Artists Index", artists_path %>
 
+
+<p> The artist's stage name is <%= @artist.name %> </p>
+
+<%= image_tag @artist.s_image_url  %>
