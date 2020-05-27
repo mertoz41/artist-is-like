@@ -30,9 +30,9 @@ Our Specialty Methods
 Model Methods
 
 Artist
-	Most Influenced
+	Most Influenced --
 		Artist with most liker_id
-	Top Influencer
+	Top Influential --
 		Artist with most liked_id
 	Most Original
 		Artist with least liker_id

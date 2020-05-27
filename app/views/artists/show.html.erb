@@ -1,8 +1,11 @@
 <h1><%=@artist.name%>'s Page</h1>
 
 <%= link_to "Back to Artists Index", artists_path %>
-
-
-<p> The artist's stage name is <%= @artist.name %> </p>
+<% if @user.follows_artist?(@artist.id) %>
+    <h4>You are following this artist</h4>
+<% else %>
+<%= button_to "Follow artist", follow_artist_path(@artist.id) %>
+<% end %> 
+<p> The artist's stage name is <%= @artist.name %></p>
 
 <%= image_tag @artist.s_image_url  %>

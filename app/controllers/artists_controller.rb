@@ -13,6 +13,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
+    @user = User.find_by(user_name: session[:user_name])
     @artist = Artist.find(params[:id])
   end
 

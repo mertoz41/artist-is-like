@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
         if @current_user
             return @current_user
         else
-            @current_user = User.find_by(id: session[:user_id])
+            @current_user = User.find_by(user_name: session[:user_name])
             return @current_user
         end
     end

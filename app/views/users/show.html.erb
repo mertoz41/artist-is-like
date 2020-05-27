@@ -2,3 +2,11 @@
 
 <h3><%=@user.first_name%> <%=@user.last_name%> </h3>
 
+<h3>Following:</h3>
+<ul>
+    <% @user.user_artists.each do |art| %>
+        <% artist = Artist.find(art.artist_id) %>
+        <li><%= link_to artist.name, artist_path(artist.id) %></li>
+    <% end %>
+</ul> 
+
