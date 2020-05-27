@@ -1,4 +1,6 @@
 class IsLikesController < ApplicationController
+  before_action :authorized, except: [:index]
+  
   def index
     @is_likes = IsLike.all
   end

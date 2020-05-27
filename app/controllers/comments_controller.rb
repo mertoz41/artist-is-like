@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
 
   before_action :find_comment, only: [:edit, :update, :destroy]
-
+  before_action :authorized
   def new
-      @user = User.find_by(user_name: session[:user_name])
+      @user = User.find_by(id: session[:user_id])
       @is_like = IsLike.find(params[:id])
       @comment = Comment.new
       

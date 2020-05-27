@@ -1,7 +1,7 @@
 require 'rest-client'
 
 class ArtistsController < ApplicationController
-
+  before_action :authorized, except: [:index]
 
   def index
     @artists = Artist.all

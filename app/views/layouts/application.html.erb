@@ -11,16 +11,24 @@
   
 
   <body>
+  <% unless controller_name == "sessions" && action_name == "new" %>
     <% if session[:user_name] %>
       <div class="nav-bar">
       <p> Hi, <%=session[:user_name]%></p>
-      <%= button_to "Logout", login_path, :method => :delete %>
+      <%= button_to "Logout", logout_path, :method => :delete %>
       </div>
+      <br>
+   <br>
+     <div><%=link_to "Artists Page", artists_path %></div>
+      <div><%=link_to "Is Likes Page", is_likes_path %></div>
+      <div><%=link_to "Make Is Likes", new_is_like_path %></div>
     <% else %>
       <div class="nav-bar">
       <%= link_to "Log in", login_path %>
       </div>
     <% end %> 
+     <% end %> 
+   
     <%= yield %>
     
   </body>
