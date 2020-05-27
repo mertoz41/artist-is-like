@@ -1,4 +1,6 @@
 require 'rest-client'
+require 'base64'
+require_relative '../../tokens_and_keys.rb'
 
 class ArtistsController < ApplicationController
 
