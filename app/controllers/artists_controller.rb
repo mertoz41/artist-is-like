@@ -29,12 +29,12 @@ class ArtistsController < ApplicationController
     https = Net::HTTP.new(url.host, url.port);
     https.use_ssl = true
       
-    client = "#{Base64.strict_encode64($API_CLIENT_ID)}"
-    secret = "#{Base64.strict_encode64($API_CLIENT_SECRET)}"
-    encoding = "#{client}:#{secret}"
+    client = Base64.strict_encode64($API_CLIENT_ID).gsub!("=", "6")
+    secret = Base64.strict_encode64($API_CLIENT_SECRET)
+    encoding = client + secret
 
     a_request = Net::HTTP::Post.new(url)
-    a_request["Authorization"] = "Basic Y2ZiYWVkYWFiYjRlNDU2M2I4MzlhM2YwMzY1ODUwM2E6NWY1MTg5OTY4ZjM1NDQ2Y2FkMzQ1ZmMxNDJjMzM5Y2U="
+    a_request["Authorization"] = "Basic #{encoding}"
     a_request["Content-Type"] = "application/x-www-form-urlencoded"
     a_request["Cookie"] = "__Host-device_id=AQAPKQDyKW4K44mlfR05wi1HY7zoU9jc-zm1FsKtFDbwQJIPW__Po34ROwHzi7AQlojZ1AAvKlRcKEBrCoG4dGHlusScPopF7lQ"
     a_request.body = "grant_type=client_credentials"
