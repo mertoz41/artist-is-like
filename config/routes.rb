@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-
+  root to: "sessions#new"
   post 'user_artists/create', to: "user_artists#create", as: "follow_artist"
   get 'is_likes/:id/comments/new', to: "comments#new", as: "like_comment"
 

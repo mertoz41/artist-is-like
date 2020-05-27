@@ -14,7 +14,7 @@
   <% unless controller_name == "sessions" && action_name == "new" %>
     <% if session[:user_name] %>
       <div class="nav-bar">
-      <p> Hi, <%=session[:user_name]%></p>
+      <p> Hi, <%= link_to session[:user_name], user_path(User.find_by(:user_name  => session[:user_name]))%></p>
       <%= button_to "Logout", logout_path, :method => :delete %>
       </div>
       <br>

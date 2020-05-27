@@ -29,11 +29,11 @@ Our Specialty Methods
 
 Model Methods
 
-Artist
-	Most Influenced --
-		Artist with most liker_id
-	Top Influential --
-		Artist with most liked_id
+Artist (Enrique)
+	<!-- Most Influenced --
+		Artist with most liker_id -->
+	<!-- Top Influential --
+		Artist with most liked_id --> -->
 	Most Original
 		Artist with least liker_id
 	Least Influential
@@ -46,7 +46,7 @@ Artist
 		Artist that most users follow 
 		[Artist, # of Users following]
 
-Comments
+Comments (jesse)
 	Top Commenter
 		User with most comments
 	Most Recent Comment
@@ -57,7 +57,9 @@ Comments
 		most comments on an IsLike
 
 
-User
+User (mert)
+	<!-- Follows_artist ---
+	    Shows artist that are being followed -->
 	Top User
 		Follows most Artists
 		returns [User, # of artists followed]
@@ -74,7 +76,7 @@ User
 	Rank_User
 		Return a rank based on amount of IsLIkes
 
-IsLike
+IsLike (jesse)
 	Count_IsLIkes
 		return how many IsLikes are created on the site 
 	Most Recent IsLIke

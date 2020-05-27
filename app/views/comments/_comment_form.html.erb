@@ -1,10 +1,9 @@
 
 <p><%= @is_like.liker.name %> is like <%= @is_like.liked.name %> </p>
 
-<p><%= @user.first_name %> </p>
 
 <%= form_for @comment do |f| %>
-    <%= f.hidden_field :user_id, :value => @user.id %>
+    <%= f.hidden_field :user_id, :value => User.find_by(:user_name => session[:user_name]).id %>
     <%= f.hidden_field :is_like_id, :value => @is_like.id %>
     <%= f.label :comment_body, "Leave your comment below:" %><br>
     <%= f.text_area :comment_body %>

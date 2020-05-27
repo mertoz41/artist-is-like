@@ -4,9 +4,13 @@
 
 <h3>Following:</h3>
 <ul>
+  <%if !@user.user_artists.empty?%>
     <% @user.user_artists.each do |art| %>
         <% artist = Artist.find(art.artist_id) %>
         <li><%= link_to artist.name, artist_path(artist.id) %></li>
+    <% end %>
+    <% else %>
+    <h4> Hey! Your not following anyone yet! Go to the <%= link_to "artists", artists_path%> page and follow someone. </h4>
     <% end %>
 </ul> 
 
