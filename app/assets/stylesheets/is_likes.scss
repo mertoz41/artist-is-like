@@ -21,7 +21,84 @@
 }
 
 .comment-box:hover {
-    background-color: rgba(210, 210, 210, 1);
-
-    
+    background-color: rgba(210, 210, 210, 1);   
 }
+div.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    width: 75vw;
+    font-size: 6rem;
+    background: linear-gradient(to right, #5B1869,#5A3C89, rgb(255, 86, 34));
+}
+h1.title-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+div.dropdown {
+    display: flex;
+    flex-direction: row;
+    background-color: none;
+    height: 10rem;
+    width: 65vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+div.like-selector {
+    font-size: 1.75rem;
+    color: #5B1869;
+}
+select#is_like_liker_id {
+    height: 2.5rem;
+    width: 16rem;
+    background-color: rgba(250, 250, 250, 1);
+    font-size: 1.25rem;
+    font-weight: bold;
+    
+
+}
+
+select#is_like_liked_id {
+    height: 2.5rem;
+    width: 16rem;
+    background-color: rgba(250, 250, 250, 1);
+    font-size: 1.25rem;
+    font-weight: bold;
+
+}
+div.test{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.test input.button {
+    border-radius: 5px;
+    height: 3rem;
+    width: 10rem;
+    font-size: 2rem;
+    background-color: rgb(255, 86, 34);
+    color: rgba(250, 250, 250, 1);
+    box-shadow: 3px 3px 4px 1px rgba(50,50,50, .4);
+}
+
+
+
+div.test input.button:hover {
+    background-color: #5A3C89;
+    color: rgba(210, 210, 210, 1);
+}
+
+div.test input.button:active {
+    background-color: #5B1869;
+    box-shadow: 0 5px rgba(50,50,50, .4);
+    color: rgba(210, 210, 210, 1);
+    transform: translateY(4px);
+}
+

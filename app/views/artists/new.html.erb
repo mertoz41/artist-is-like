@@ -1,9 +1,12 @@
-<h1> Add an Artist </h1>
+<div class="content-wrapper">
+<h1 class="title-text"> Add an Artist </h1>
 
-
+<div class="form-wrapper">
 <%= form_for @artist do |f| %>
     <%= f.hidden_field :access, :value => @access %>
     <%= f.label :name %>
     <%= f.text_field :name%>
     <%= f.submit %>
 <% end %>
+</div>
+</div>

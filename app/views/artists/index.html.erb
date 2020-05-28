@@ -1,4 +1,5 @@
-<h1>Artists Page</h1>
+<div class="content-wrapper">
+<h1 class="title-text">Artists Page</h1>
 
 <%= link_to "Create a new Artist", new_artist_path %>
 
@@ -7,3 +8,4 @@
    <li><%=link_to artist.name, artist_path(artist)%></li>
    <%end%>
 </ul>
+</div>

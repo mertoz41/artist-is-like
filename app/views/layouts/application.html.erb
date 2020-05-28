@@ -15,15 +15,16 @@
   <% unless controller_name == "sessions" && action_name == "new" %>
     <% if session[:user_name] %>
       <div class="nav-bar">
-      <p> Hi, <%= link_to session[:user_name], user_path(User.find_by(:user_name  => session[:user_name]))%></p>
-      <%= button_to "Logout", logout_path, :method => :delete %>
-      </div>
+      <p id="user-welcome"> Hi, <%= link_to session[:user_name], user_path(User.find_by(:user_name  => session[:user_name]))%></p>
+      
    
    <ul class="nav-bar-links">
      <li class="nav-link"><%=link_to "Artists Page", artists_path %></li>
       <li class="nav-link"><%=link_to "Is Likes Page", is_likes_path %></li>
       <li class="nav-link"><%=link_to "Make Is Likes", new_is_like_path %></li>
       </ul>
+      <%= button_to "Logout", logout_path, :method => :delete %>
+      </div>
     <% else %>
       <div class="nav-bar">
       <%= link_to "Log in", login_path %>

@@ -1,4 +1,5 @@
-<h1>AIsLikes#index</h1>
+<div class="content-wrapper">
+<h1 class="title-text">Is likes</h1>
 
 <div>
    <%@is_likes.each do |like|%>
@@ -7,4 +8,5 @@
       <%= link_to "Add a Comment", like_comment_path(like)%>
    </div>
    <%end%>
+</div>
 </div>

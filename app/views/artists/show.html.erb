@@ -1,4 +1,4 @@
-<h1><%=@artist.name%>'s Page</h1>
+<h1 class="title-text"><%=@artist.name%>'s Page</h1>
 
 <%= link_to "Back to Artists Index", artists_path %>
 <% if @user.follows_artist?(@artist.id) %>
