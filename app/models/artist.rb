@@ -26,7 +26,7 @@ class Artist < ApplicationRecord
         Artist.all.each do |art|
             hash[art.name] = art.likeds.count 
         end
-        most_influenced = hash.sort_by{|k, v| v }.last
+        most_influenced = hash
         return most_influenced  
        
     end 

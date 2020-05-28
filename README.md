@@ -47,14 +47,14 @@ Artist (Enrique)
 		[Artist, # of Users following]
 
 Comments (jesse)
-	Top Commenter
+	<!-- Top Commenter
 		User with most comments
 	Most Recent Comment
 		Return most recent comment
 	Recent Activity
 		Return 3 most recent comments
 	Most Talked About
-		most comments on an IsLike
+		most comments on an IsLike -->
 
 
 User (mert)
