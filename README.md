@@ -29,22 +29,22 @@ Our Specialty Methods
 
 Model Methods
 
-Artist (Enrique)
+Artist (Enrique) What do we do to tiebreak?
 	<!-- Most Influenced --
 		Artist with most liker_id -->
 	<!-- Top Influential --
 		Artist with most liked_id --> -->
-	Most Original
+	<!-- Most Original
 		Artist with least liker_id
 	Least Influential
-		Artist with least liked_id
-	Average Influences
-		return average number of influences that Artists have
-	Count_Artists
-		return how many artists are hosted on the site 
-	Most followed Artist
+		Artist with least liked_id -->
+	<!-- Average Influences
+		return average number of influences that Artists have -->
+	<!-- Count_Artists
+		return how many artists are hosted on the site  -->
+	<!-- Most followed Artist
 		Artist that most users follow 
-		[Artist, # of Users following]
+		[Artist, # of Users following] -->
 
 Comments (jesse)
 	<!-- Top Commenter
