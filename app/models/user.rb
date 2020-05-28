@@ -63,7 +63,7 @@ class User < ApplicationRecord
         rank = hash.sort_by{|k, v| -v } 
         ranked = rank.map do |k, v|
             num += 1 
-            puts "#{num}. #{k}: (#{v})"
+             "#{num}. #{k}: (#{v})"
         end
         return ranked 
     end 

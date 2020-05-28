@@ -16,9 +16,10 @@ class IsLike < ApplicationRecord
     end
 
     def self.most_recent
-        liked_object = Artist.find(self.all.last.liked_id)
-        liker_object = Artist.find(self.all.last.liker_id)
-         return "#{liker_object.name} is Like #{liked_object.name}"
+        is_like = self.last
+        # liked_object = Artist.find(self.all.last.liked_id)
+        # liker_object = Artist.find(self.all.last.liker_id)
+         return "#{is_like.liker.name} is Like #{is_like.liked.name}"
     end
     
 
