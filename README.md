@@ -60,20 +60,20 @@ Comments (jesse)
 User (mert)
 	<!-- Follows_artist ---
 	    Shows artist that are being followed -->
-	Top User
+	Top User -- 
 		Follows most Artists
 		returns [User, # of artists followed]
-	Full name
+	Full name --
 		returns first and last name together
-	Full Name with First Initial Last Name
+	Full Name with First Initial Last Name --
 		Return the first name and first initial capitalized with a period
-	Count_Users
+	Count_Users --
 		return how many users are created on the site 
-	Count_Comments
+	Count_Comments --
 		return how many comments a user has made on the site
-	Newest User
+	Newest User --
 		return newest User
-	Rank_User
+	Rank_User -- 
 		Return a rank based on amount of IsLIkes
 
 IsLike (jesse)
