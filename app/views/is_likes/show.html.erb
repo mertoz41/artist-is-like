@@ -1,12 +1,14 @@
-<h1>Is Likes</h1>
-<%= link_to "Add a Comment", like_comment_path(@is_like)%>
+<div class="content-wrapper">
+<h1 class= "title-text">Is Likes</h1>
 
 
 
 <h3> <%= @is_like.liker.name %> is like <%= @is_like.liked.name %> </h3>
 
-
+<div class="comment-banner">
 <h4> Comments </h4>
+<%= link_to "Add a Comment", like_comment_path(@is_like)%>
+</div>
 
 <section>
 
@@ -23,3 +25,5 @@
 
 </section>
 
+
+</div>

@@ -1,11 +1,16 @@
 <div class="content-wrapper">
-<h1 class="title-text">Artists Page</h1>
+   <h1 class="title-text">Artists Page</h1>
 
-<%= link_to "Create a new Artist", new_artist_path %>
 
-<ul>
-   <%@artists.each do |artist|%>
-   <li><%=link_to artist.name, artist_path(artist)%></li>
-   <%end%>
-</ul>
+   <div class="artists">
+   <div class="artist-banner">
+      <h3>Artists</h3>
+      <%= link_to "Create a new Artist", new_artist_path %>
+   </div>
+      <ul class="artist-menu">
+         <%@artists.each do |artist|%>
+         <li class="artist-menu-item"><%=link_to artist.name, artist_path(artist)%></li>
+         <%end%>
+      </ul>
+   </div>
 </div>

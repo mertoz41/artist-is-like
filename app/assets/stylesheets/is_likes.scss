@@ -2,27 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.comment-box {
-    height: 4rem;
-    width: 60%;
 
-    margin: 2px;
-    background-color: rgba(230, 230, 230, 1);
-
-    border: solid 1px darkgrey;
-    border-radius: 3px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-}
-
-.comment-box:hover {
-    background-color: rgba(210, 210, 210, 1);   
-}
 div.content-wrapper {
     display: flex;
     flex-direction: column;
@@ -32,13 +12,16 @@ div.content-wrapper {
 h1{
     width: 75vw;
     font-size: 6rem;
-    background: linear-gradient(to right, #5B1869,#5A3C89, rgb(255, 86, 34));
+    background: linear-gradient(to right,#5A3C89, rgb(255, 86, 34), rgb(212, 58, 81));
 }
 h1.title-text {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 
+}
+div.form-wrapper{
+    overflow: scroll;
 }
 div.dropdown {
     display: flex;
@@ -55,7 +38,7 @@ div.like-selector {
 }
 select#is_like_liker_id {
     height: 2.5rem;
-    width: 16rem;
+    width: 20rem;
     background-color: rgba(250, 250, 250, 1);
     font-size: 1.25rem;
     font-weight: bold;
@@ -65,7 +48,7 @@ select#is_like_liker_id {
 
 select#is_like_liked_id {
     height: 2.5rem;
-    width: 16rem;
+    width: 20rem;
     background-color: rgba(250, 250, 250, 1);
     font-size: 1.25rem;
     font-weight: bold;
@@ -102,3 +85,33 @@ div.test input.button:active {
     transform: translateY(4px);
 }
 
+div.comment-banner{
+    
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.comment-box {
+    height: 4rem;
+    width: 60vw;
+
+    margin: 4px;
+    background-color: rgba(230, 230, 230, 1);
+
+    border: solid 1px darkgray;
+    border-radius: 3px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+div.comment-box:hover {
+    background-color: rgba(210, 210, 210, 1);   
+}

@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
-    background: linear-gradient(to right, #5B1869,#5A3C89, rgb(255, 86, 34))
+    background: linear-gradient(to right, #5A3C89, rgb(255, 86, 34), rgb(212, 58, 81));
 }
 
 div.website-container {
