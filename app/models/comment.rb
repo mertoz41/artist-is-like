@@ -47,7 +47,7 @@ class Comment < ApplicationRecord
     def self.recent_one
         object =  self.most_recent_comment_objects(1)
         object.each do |body|
-         return "Date Posted: #{body.updated_at.strftime("%m/%d/%Y")} || Comment: #{body.comment_body}"
+         return "Date Posted: #{body.updated_at.strftime("%m/%d/%Y")} || \n Comment: #{body.comment_body}"
         end
      end
 

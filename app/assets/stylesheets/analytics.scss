@@ -2,8 +2,93 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 div.data-wrapper {
-    border: solid 1px darkgrey;
-    width: 61vw;
+    border: grooze 1px darkgrey;
+    width: 50vw;
     border-radius: 5px;
     padding: 1rem;
+    box-shadow: -3px -3px 3px 3px rgba(250, 250, 250, .4), 3px 3px 3px 3px rgba(170, 170, 170, .3);
+}
+
+div.a_scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 3px rgba(250, 250, 250, .4), -3px -3px 3px 3px rgba(170, 170, 170, .3);
+    overflow: auto;
+    height: 40vh;
+    width: 57vw;
+    // background-color: rgba(255, 255, 255, 0.671);
+}
+
+strong {
+    font-weight: bolder;
+    color: rgb(51, 5, 83);
+}
+
+h3 {
+    font-weight: bolder;
+    color: rgb(51, 5, 83);
+}
+
+div.data-wrapper p {
+    border: grooze 1px darkgrey;
+    width: 47vw;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 1px 1px 1px 1px rgba(250, 250, 250, .4), -1px -1px 1px 1px rgba(170, 170, 170, .3);
+}
+
+h6.rank_users {
+    background-color: rgba(250, 250, 250, .4);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: rgb(51, 5, 83);
+    height: 4rem;
+    width: 60vw;
+    margin-top: .8rem;
+    margin-bottom: .8rem;
+    box-shadow: 1px 1px 1px 1px rgba(250, 250, 250, .4), -1px -1px 1px 1px rgba(170, 170, 170, .3);
+}
+
+div.artists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ul.artist-menu {
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px 3px rgba(250, 250, 250, .4), -3px -3px 3px 3px rgba(170, 170, 170, .3);
+    overflow: auto;
+    height: 40vh;
+    width: 100%;
+}
+
+li.artist-menu-item {
+    height: 4rem;
+    width: 60vw;
+    margin-top: .8rem;
+    margin-bottom: .8rem;
+    background-color: rgba(230, 230, 230, 1);
+    box-shadow: -3px -3px 3px 3px rgba(250, 250, 250, .4), 3px 3px 3px 3px rgba(170, 170, 170, .3);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+li.artist-menu-item:hover {
+    background-color: rgba(210, 210, 210, 1);
+}
+
+li.artist-menu-item a {
+    text-decoration: none;
+    color: rgba(80, 80, 80, 1);
 }
