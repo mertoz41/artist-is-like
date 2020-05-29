@@ -1,8 +1,10 @@
 <div class="content-wrapper">
+<div class="test-wrapper">
 <h1 class="title-text"><%=@artist.name%>'s Page</h1>
 
-<%= link_to "Back to Artists Index", artists_path %>
+
 <div class="artist-details">
+<%= link_to "Back to Artists Index", artists_path %>
 <div class="artist-banner">
 <p> The artist's stage name is <%= @artist.name %></p>
 <% if @user.follows_artist?(@artist.id) %>
@@ -13,5 +15,17 @@
 
 </div>
 
+
 <%= image_tag @artist.s_image_url, class: "show-img" %>
+</div>
+
+<div class="influences">
+<h3>Influences</h3>
+<div class="influences-gallery">
+<%@artist.likeds.each do |likeds| %>
+    <%= image_tag likeds.s_image_url, class: "show-influence" %>
+    <%end %>
+    </div>
+</div>
+</div>
 </div>

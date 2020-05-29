@@ -8,10 +8,13 @@ div.content-wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 80vh;
+    overflow: scroll;
     
 }
 h1{
     width: 75vw;
+    height: initial;
     font-size: 6rem;
     background: linear-gradient(to right,#5A3C89, rgb(255, 86, 34), rgb(212, 58, 81));
 }
@@ -57,12 +60,14 @@ select#is_like_liked_id {
 }
 div.test{
     width: 100%;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
-div.test input.button {
+input.button {
     border-radius: 5px;
     height: 3rem;
     width: 10rem;
@@ -74,12 +79,12 @@ div.test input.button {
 
 
 
-div.test input.button:hover {
+input.button:hover {
     background-color: #5A3C89;
     color: rgba(210, 210, 210, 1);
 }
 
-div.test input.button:active {
+input.button:active {
     background-color: #5B1869;
     box-shadow: 0 5px rgba(50,50,50, .4);
     color: rgba(210, 210, 210, 1);

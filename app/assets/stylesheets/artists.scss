@@ -2,12 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+div.test-wrapper{
+    display: block;
+    height: 80vh;
+    overflow: scroll;
+}
+
 div.artist-banner{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 40vw;
 }
 
 div.artists{
@@ -62,20 +68,34 @@ li.artist-menu-item a {
 div.artist-details {
     width: 70vw;
     height: 50vh;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: scroll;
 }
 
-div.artist-banner {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 40vw;
-}
 
 img.show-img {
-    width: 40vw;
+    height: 41vh;
 }
+
+div.influences {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.influences-gallery {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+
+}
+img.show-influence {
+    
+    height: 15vh;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 3px;
+}
+

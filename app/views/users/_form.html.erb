@@ -7,17 +7,24 @@
 
 
 
-
 <%=form_for(@user) do |f|%>
+    <div class="register-form">
+    <div class="register-labels">
  <%=f.label :first_name%>
- <%=f.text_field :first_name%>
  <%=f.label :last_name%>
- <%=f.text_field :last_name%>
  <%=f.label :user_name%>
- <%=f.text_field :user_name%>
  <%=f.label :password%>
- <%=f.password_field :password%>
  <%=f.label :password_confirmation %>
- <%=f.password_field :password_confirmation%>
- <%=f.submit%>
+ </div>
+    <div class="register-fields">
+ <%=f.text_field :first_name, :placeholder => "First name"%>
+ <%=f.text_field :last_name, :placeholder => "Last name"%>
+ <%=f.text_field :user_name, :placeholder => "User name"%>
+ <%=f.password_field :password, :placeholder => "Password"%>
+ <%=f.password_field :password_confirmation, :placeholder => "Confirm password"%>
+ </div>
+ </div>
+ <div class="test">
+ <%=f.submit "Register", class:"button"%>
+ </div>
  <%end%>
