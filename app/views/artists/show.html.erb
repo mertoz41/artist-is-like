@@ -1,11 +1,17 @@
+<div class="content-wrapper">
 <h1 class="title-text"><%=@artist.name%>'s Page</h1>
 
 <%= link_to "Back to Artists Index", artists_path %>
-<% if @user.follows_artist?(@artist.id) %>
-    <h4>You are following this artist</h4>
-<% else %>
-<%= button_to "Follow artist", follow_artist_path(@artist.id) %>
-<% end %> 
+<div class="artist-details">
+<div class="artist-banner">
 <p> The artist's stage name is <%= @artist.name %></p>
+<% if @user.follows_artist?(@artist.id) %>
+    <p>You are following this artist</p>
+<% else %>
+    <%= button_to "Follow artist", follow_artist_path(@artist.id) %>
+<% end %> 
 
-<%= image_tag @artist.s_image_url  %>
+</div>
+
+<%= image_tag @artist.s_image_url, class: "show-img" %>
+</div>

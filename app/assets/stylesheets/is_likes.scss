@@ -8,6 +8,7 @@ div.content-wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 h1{
     width: 75vw;
@@ -18,7 +19,7 @@ h1.title-text {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-
+    text-align: center;
 }
 div.form-wrapper{
     overflow: scroll;

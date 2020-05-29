@@ -58,3 +58,24 @@ li.artist-menu-item a {
     text-decoration: none;
     color: rgba(80, 80, 80, 1);
 }
+
+div.artist-details {
+    width: 70vw;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+div.artist-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40vw;
+}
+
+img.show-img {
+    width: 40vw;
+}
