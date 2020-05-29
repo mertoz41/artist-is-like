@@ -47,4 +47,17 @@ let(:attributes) do
             new_comment = Comment.create(attributes)
           expect(Comment.recent_one).to eq("Date Posted: #{new_comment.updated_at.strftime("%m/%d/%Y")} || \n Comment: #{new_comment.comment_body}")
           end
+
+        it "most recent comment objects" do
+            comment = Comment.create(attributes)
+        expect(Comment.most_recent_comment_objects(1)).to eq([comment])
+        end 
+
+        it "ids and counts" do
+            comment = Comment.create(attributes)
+            user1 = User.create(user_one)
+        expect(Comment.ids_and_counts).to eq({1=>1})
+        end 
+
+
 end

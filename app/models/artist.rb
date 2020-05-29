@@ -7,6 +7,7 @@ class Artist < ApplicationRecord
     has_many :likeds, through: :influenced_by, source: :liked 
     has_many :influenced, class_name: "IsLike", foreign_key: :liked_id, dependent: :destroy
     has_many :likers, through: :influenced, source: :liker
+    
 
 
     def self.most_influential 
