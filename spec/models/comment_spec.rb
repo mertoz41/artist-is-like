@@ -41,4 +41,10 @@ let(:attributes) do
     it "is considered valid" do    
         expect(Comment.new(attributes)).to be_valid
         end
+
+        it "most recent comment" do  
+            old_comment = Comment.create(attributes)
+            new_comment = Comment.create(attributes)
+          expect(Comment.recent_one).to eq("Date Posted: #{new_comment.updated_at.strftime("%m/%d/%Y")} || \n Comment: #{new_comment.comment_body}")
+          end
 end

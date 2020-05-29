@@ -24,6 +24,6 @@ class AnalyticsController < ApplicationController
 
     #is_likes
      @most_recent = IsLike.most_recent
-     @islike_count = IsLike.count
+     @islike_count = IsLike.islike_count
   end
 end

@@ -26,4 +26,18 @@ RSpec.describe IsLike, type: :model do
         it "is considered valid" do    
             expect(IsLike.new(attributes)).to be_valid
             end
+         
+        
+        it "IsLike Count" do  
+            first_islike = IsLike.create(attributes)
+            second_islike = IsLike.create(attributes)
+            expect(IsLike.islike_count).to eq(2)
+            end
+
+        it "most recent is like" do  
+            first_islike = IsLike.create(attributes)
+            second_islike = IsLike.create(attributes)
+            expect(IsLike.most_recent).to eq("#{second_islike.liker.name} is Like #{second_islike.liked.name}")
+            end
+
 end

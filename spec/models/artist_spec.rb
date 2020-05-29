@@ -13,4 +13,11 @@ RSpec.describe Artist, type: :model do
         it "is considered valid" do    
             expect(Artist.new(attributes)).to be_valid
             end
+
+            it "responds with total artists" do  
+                  new_artist = Artist.create(attributes)
+                expect(Artist.total_artists).to be(1)
+                end
+
+
 end

@@ -11,7 +11,7 @@ class IsLike < ApplicationRecord
     has_many :users, through: :comments
 
 
-    def self.count
+    def self.islike_count
         self.all.count
     end
 
