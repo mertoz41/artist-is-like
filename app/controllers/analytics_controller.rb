@@ -11,7 +11,8 @@ class AnalyticsController < ApplicationController
     @most_talked_about = Comment.most_talked_about
     @most_recent_comment = Comment.recent_one
     @top_commenter = Comment.top_commenter
-   
+    @recent_comment_body = Comment.most_recent_comment_bodies(1)
+    @recent_comment_date = Comment.most_recent_comments_dates(1)
     #artists
     @influential_artist = Artist.most_influential 
     @influenced_artist = Artist.most_influential 

@@ -19,8 +19,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
-    background: linear-gradient(to right, #5A3C89, rgb(255, 86, 34), rgb(212, 58, 81));
 }
 
 div.website-container {
@@ -29,49 +27,21 @@ div.website-container {
     height: 95vh;
     width: 95vw;
 }
-div.nav-bar {
-    background-color: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 
-
-
-
-}
-p#user-welcome{
-    padding-left: 1rem;
-}
-p#user-welcome a {
-    text-decoration: none;
-    
-    color: rgb(255, 86, 34);
-    font-weight: 600;
-    cursor: pointer;
-}
-div.nav-bar form.button_to {
-    padding-right: 1rem;
-}
 ul.nav-bar-links {
-    
-    width: 50%;
     background-color: none;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly
-    
 }
 
 li.nav-link {
-    cursor: pointer;
     list-style: none;
     text-decoration: none;
 }
 
 li.nav-link a {
-    
-    transition: ease-in .2s;
+    transition: ease-in .3s;
     text-decoration: none;
     color: rgb(80, 80, 80);
 }
@@ -81,4 +51,3 @@ li.nav-link a:hover {
     font-weight: bolder;
     color: rgb(40, 40, 40);
 }
-
