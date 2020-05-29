@@ -15,7 +15,7 @@ class AnalyticsController < ApplicationController
     @recent_comment_date = Comment.most_recent_comments_dates(1)
     #artists
     @influential_artist = Artist.most_influential 
-    @influenced_artist = Artist.most_influential 
+    @influenced_artist = Artist.most_influenced 
     @most_original = Artist.most_original
     @least_influential = Artist.least_influential
     @average_influences = Artist.average_influences

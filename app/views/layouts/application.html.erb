@@ -12,7 +12,7 @@
 
   <body>
   <div class="website-container">
-  <% unless controller_name == "sessions" && action_name == "new" %>
+  <% unless (controller_name == "sessions" && action_name == "new") || (controller_name == "users" && action_name == "new")   %>
     <% if session[:user_name] %>
       <div class="nav-bar">
       <p id="user-welcome"> Hi, <%= link_to session[:user_name], user_path(User.find_by(:user_name  => session[:user_name]))%></p>
