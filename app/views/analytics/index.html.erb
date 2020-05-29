@@ -1,50 +1,51 @@
 <div class="content-wrapper">
 <h1 class="title-text">Analytics Page</h1>
 
-
-<div><p>Artists</p></div>
+<div class="all_data">
+<div><h3>Artists</h3></div>
 <div class="data-wrapper">
-<p> <strong>Most Influential:</strong> The Artist <%=@influential_artist[0]%> has influenced <%=@influential_artist[1]%> other artists.</P>
-<p> <strong> Most Influenced:</strong>The Artist <%=@influenced_artist[0]%>  has been influenced by <%=@influenced_artist[1]%> artists.</P>
-<p><strong>Most Orginal Artist:</strong> <%=@most_original[0]%> </P>
-<p><strong> Least Influential Artist:</strong> <%= @least_influential[0]%> </P>
-<p><strong> On average how many artist are influenced by other artists:</strong>  <%= @average_influences.round(2)%> </P>
-<p><strong> Total Number of Artists:</strong> <%=@total_artists%> </P>
-<p> <strong>Most Followed Artist:</strong> <%= @most_followed[0]%> is followed by <%= @most_followed[1]%> user(s)</P>
+<p> <strong>Most Influential:  </strong> The Artist <%=@influential_artist[0]%> has influenced <%=@influential_artist[1]%> other artists.</p>
+<p> <strong> Most Influenced:  </strong>The Artist <%=@influenced_artist[0]%>  has been influenced by <%=@influenced_artist[1]%> artists.</p>
+<p><strong>Most Orginal Artist:  </strong> <%=@most_original[0]%> </p>
+<p><strong> Least Influential Artist:  </strong> <%= @least_influential[0]%> </p>
+<p><strong> On average how many artist are influenced by other artists:  </strong>  <%= @average_influences.round(2)%> </p>
+<p><strong> Total Number of Artists:  </strong> <%=@total_artists%> </p>
+<p> <strong>Most Followed Artist:  </strong> <%= @most_followed[0]%> is followed by <%= pluralize(@most_followed[1], "user")%></p>
 </div>
 
 
-<div><p>Users</p></div>
+<div><h3>Users</h3></div>
 <div class="data-wrapper">
-<p> <strong>Top User:</strong> <%=@top_user[0]%> </P>
-<p> <strong>Number of Users:</strong> <%=@num_users%> </P>
-<p> <strong>The Last User: </strong><%=@last_user%> </P>
+<p> <strong>Top User:  </strong> <%=@top_user[0]%> </p>
+<p> <strong>Number of Users:  </strong> <%=@num_users%> </p>
+<p> <strong>The Last User:  </strong><%=@last_user%> </p>
 <p> <strong>Top Ranked Users: </strong> 
-<div class="rank_users">
+<span>
 <%= @rank_list[0]%> 
 <br>
 <%= @rank_list[1]%> 
 <br>
 <%= @rank_list[2]%> 
-</div>
-</P>
+</span>
+</p>
 </div>
 
 
-<div><p>Comments</p></div>
+<div><h3>Comments</h3></div>
 <div class="data-wrapper">
-<p> <strong>Most Recent Comments: </strong> <%=@most_recent_three_comment%> </P>
-<p> <strong>Most Talked About Is Like: </strong><%=@most_talked_about%> </P>
-<p> <strong>Most Recent Comment: </strong><%=@most_recent_comment%> </P>
-<p> <strong>Top Commenter: </strong><%= @top_commenter%> </P>
+<p> <strong>Top Commenter: </strong><%= @top_commenter%> </p>
+<p> <strong>Most Talked About Is Like: </strong><%=@most_talked_about%> </p>
+<p> <strong>Most Recent Comment Date: </strong><%=@recent_comment_date[0]%> </p>
+<p> <strong>Most Recent Comment: </strong><%=@recent_comment_body[0]%> </p>
+
 </div>
 
 
-<div><p>Is Likes</p></div>
+<div><h3>Is Likes</h3></div>
 <div class="data-wrapper">
-<p><strong> Most Recent Comment: </strong> <%=@most_recent %> </P>
-<p><strong> Number of Is Likes:  </strong><%= @islike_count %> </P>
+<p><strong> Most Recent Comment: </strong> <%=@most_recent %> </p>
+<p><strong> Total Number of Is-Likes:  </strong><%= @islike_count %> </p>
 </div>
- 
+ </div>
 </div>
 

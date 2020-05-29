@@ -1,9 +1,71 @@
 // Place all the styles related to the analytics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+    font-weight: bolder;
+    color: rgb(255, 86, 34);
+}
+
 div.data-wrapper {
-    border: solid 1px darkgrey;
-    width: 61vw;
+    border: grooze 1px darkgrey;
+    width: 50vw;
     border-radius: 5px;
     padding: 1rem;
+    box-shadow: -3px -3px 3px 3px rgba(250, 250, 250, .4), 3px 3px 3px 3px rgba(170, 170, 170, .3);
+}
+
+div.all_data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 3px rgba(250, 250, 250, .4), -3px -3px 3px 3px rgba(170, 170, 170, .3);
+    overflow: auto;
+    height: 40vh;
+    width: 57vw;
+    // background-color: rgba(255, 255, 255, 0.671);
+}
+
+strong {
+    font-weight: bolder;
+    color: rgb(51, 5, 83);
+}
+
+h3 {
+    font-weight: bolder;
+    color: rgb(51, 5, 83);
+}
+
+div.data-wrapper p {
+    border: grooze 1px darkgrey;
+    width: 47vw;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 1px 1px 1px 1px rgba(250, 250, 250, .4), -1px -1px 1px 1px rgba(170, 170, 170, .3);
+}
+
+h6.rank_users {
+    background-color: rgba(250, 250, 250, .4);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: rgb(51, 5, 83);
+    height: 4rem;
+    width: 60vw;
+    margin-top: .8rem;
+    margin-bottom: .8rem;
+    box-shadow: 1px 1px 1px 1px rgba(250, 250, 250, .4), -1px -1px 1px 1px rgba(170, 170, 170, .3);
+}
+
+span {
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+    // color: rgb(51, 5, 83);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
