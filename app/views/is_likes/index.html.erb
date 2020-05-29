@@ -1,12 +1,14 @@
 <div class="content-wrapper">
-<h1 class="title-text">Is likes</h1>
+   <h1 class="title-text">Is likes</h1>
 
-<div>
-   <%@is_likes.each do |like|%>
-   <div>
-      <p><%=link_to "#{like.liker.name} is like #{like.liked.name}", is_like_path(like)%></p>
-      <%= link_to "Add a Comment", like_comment_path(like)%>
+   <div class="is-likes">
+      <ul class="is-likes-menu">
+         <%@is_likes.each do |like|%>
+            <li class="is-like-item"><%=link_to "#{like.liker.name} is like #{like.liked.name}", is_like_path(like)%>
+            <%= (like.comments.count) %>
+            <%= link_to "Add a Comment", like_comment_path(like)%></li>
+            
+         <%end%>
+      </ul>
    </div>
-   <%end%>
-</div>
 </div>
